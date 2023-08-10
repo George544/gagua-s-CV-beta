@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Creative Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#home">George Gagua</a>
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section home-section">
+        <div class="intro">
+            <h1>Welcome to My Creative World</h1>
+            <p>Exploring the intersection of design, technology, and imagination.</p>
+            <a href="#portfolio" class="cta-button">View Portfolio</a>
+        </div>
+    </section>
+
+    <section id="about" class="section about-section">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <div class="about-details">
+                <div class="profile-image">
+                    <img src="imgs/me.jpg" alt="Your Name">
+                </div>
+                <div class="profile-text">
+                    <p>Hello there! I'm a visionary designer with an insatiable curiosity for all things creative. Whether I'm sketching, coding, or bringing ideas to life, my passion drives me to create innovative and captivating experiences that leave a lasting impression.</p>
+                    <p>With a background in design and a knack for pushing boundaries, I love collaborating with forward-thinking individuals and businesses to craft designs that resonate. Let's embark on a creative journey together!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section portfolio-section">
+        <h2>My Portfolio</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="projects/1.png" alt="Project 1">
+                
+                <p>Fashion shop</p>
+                <a href="index1.html" class="project-button" target="_blank">View Project</a>
+            </div>
+            <div class="project">
+                <img src="projects/2.png" alt="Project 2">
+                <p>Vegan shop</p>
+                <a href="#project1" class="project-button">View Project</a>
+            </div>
+            <div class="project">
+                <img src="projects/3.png" alt="Project 2">
+                <p>Redefining possibilities through design.</p>
+                <a href="#project1" class="project-button">View Project</a>
+            </div>
+            <div class="project">
+                <img src="projects/4.png" alt="Project 2">
+                <p>Redefining possibilities through design.</p>
+                <a href="#project1" class="project-button">View Project</a>
+            </div>
+            
+            <!-- Add more projects here -->
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="contact-content">
+            <h2>Contact Me</h2>
+            <p>Ready to take the next creative step? I'm just a message away! Let's bring your ideas to life.</p>
+            <div class="contact-form">
+                <form id="contact-form">
+                    <input type="text" id="name" placeholder="Your Name">
+                    <input type="email" id="email" placeholder="Your Email">
+                    <textarea id="message" placeholder="Your Message"></textarea>
+                    <button type="button" class="contact-button" id="send-button">Send Message</button>
+                </form>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+            <div class="social-icons">
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-facebook"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2023 George Gagua's Portfolio. All rights reserved. | Designed by <a href="#" target="_blank">George Gagua</a></p>
+            </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sendButton = document.getElementById("send-button");
+        
+            sendButton.addEventListener("click", function() {
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+        
+                const subject = "New Contact Form Submission";
+                const body = `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`;
+        
+                // Construct the mailto link
+                const mailtoLink = `mailto:anigagua777@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+                // Open the default email client
+                window.location.href = mailtoLink;
+            });
+        });
+        </script>
+        
+</body>
+</html>

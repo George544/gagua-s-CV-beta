@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleorder.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo"><img src="imgs/logo.jpg" alt="Logo"></a>
+            <ul>
+              <li><a href="index1.html">Home</a></li>
+              <li><a href="indexshop.html">Shop</a></li>
+              <li><a href="indexabout.html">About</a></li>
+              <li><a href="indexorder.html">Order</a></li>
+            </ul>
+          </nav>
+    </header>
+
+    <div class="order" id="Order">
+        <h1><span>Order</span>Now</h1>
+
+        <div class="order_main">
+
+            <div class="order_image">
+                <img style="border-radius: 20%;" src="imgs/order.png">
+            </div>
+
+            <form id="orderForm">
+
+                <div class="input">
+                    <p>Name</p>
+                    <input id="nameInput" type="text" placeholder="your name" required>
+                </div>
+
+                <div class="input">
+                    <p>Email</p>
+                    <input id="emailInput" type="email" placeholder="your email" required>
+                </div>
+
+                <div class="input">
+                    <p>Number</p>
+                    <input id="numberInput" placeholder="your number" required>
+                </div>
+
+                <div class="input">
+                    <p>How many</p>
+                    <input id="quantityInput" type="number" placeholder="how many orders" required>
+                </div>
+
+                <div class="input">
+                    <p>Your Order</p>
+                    <input id="orderInput" placeholder="shoe name" required>
+                </div>
+
+                <div class="input">
+                    <p>Address</p>
+                    <input id="addressInput" placeholder="your address" required>
+                </div>
+
+                <button style="font-family:Arial, Helvetica, sans-serif;" type="submit" class="order_btn">Order Now</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+
+            
+            var name = document.getElementById('nameInput').value;
+            var email = document.getElementById('emailInput').value;
+            var number = document.getElementById('numberInput').value;
+            var quantity = document.getElementById('quantityInput').value;
+            var order = document.getElementById('orderInput').value;
+            var address = document.getElementById('addressInput').value;
+
+        
+            var subject = encodeURIComponent('New Order');
+            var body = encodeURIComponent(
+                'Name: ' + name + '\n' +
+                'Email: ' + email + '\n' +
+                'Number: ' + number + '\n' +
+                'Quantity: ' + quantity + '\n' +
+                'Order: ' + order + '\n' +
+                'Address: ' + address
+            );
+            var mailtoLink = 'mailto:anigagua777@gmail.com?subject=' + subject + '&body=' + body;
+
+            
+            window.open(mailtoLink, '_blank');
+
+            
+            document.getElementById('nameInput').value = '';
+            document.getElementById('emailInput').value = '';
+            document.getElementById('numberInput').value = '';
+            document.getElementById('quantityInput').value = '';
+            document.getElementById('orderInput').value = '';
+            document.getElementById('addressInput').value = '';
+        });
+    </script>
+</body>
+</html>

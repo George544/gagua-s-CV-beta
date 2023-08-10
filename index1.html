@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    /* Set the background image properties */
+    background-image: url('imgs/bc.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.4s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff3377;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero {
+    text-align: center;
+    padding: 70px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+.cta-button{
+  padding: 9px 12px;
+    background-color: #ff3377;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.4s ease;
+
+}
+
+
+.view-button {
+    padding: 4px 10px;
+    background-color: #ff3377;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.4s ease;
+}
+
+.cta-button:hover,
+.view-button:hover {
+    background-color: #d9004c;
+}
+
+/* Customize the "View" button styles */
+.view-button {
+    background-color: #ff3377;
+    margin-top: 10px;
+}
+
+.view-button:hover {
+    background-color: #8b123a;
+}
+
+.featured-products {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin: 0 50px;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    position: relative;
+}
+
+.product-image img {
+    width: 96%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-image:hover .hover-image {
+    opacity: 1;
+}
+
+footer {
+    width: 100%;
+    padding: 20px 0 0 20px;
+    color: #fff;
+}
+
+footer .footer_main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+footer .footer_main .footer_tag {
+  text-align: center;
+  margin: 20px;
+  padding: 0 15px; /* Add left and right padding to create space from the container edge */
+}
+
+footer .footer_main .footer_tag h2 {
+  color: #ff3377;
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+footer .footer_main .footer_tag p {
+  margin: 5px 0; /* Reduce the vertical margin for the paragraph elements */
+}
+
+footer .footer_main .footer_tag i {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover {
+    color: #ff3377;
+}
+
+footer .footer_main .footer_tag img {
+    height: 30px;
+    width: 30px;
+    padding-right: 22px;
+}
+
+footer .end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+footer .end span {
+    color: #ff3377;
+    margin-left: 10px;
+}
+.faint-red-background {
+            background-color: rgba(255, 51, 119, 0.1); /* Change the color values as needed */
+        }
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff3377;
+    border-radius: 15px;
+}
+@media screen and (max-width: 768px) {
+  .logo img {
+                height: 65px;
+                width: 65px;
+              }
+            
+              nav ul li a {
+                padding: 10px;
+                border-radius: 4px;
+                transition: background-color 0.4s ease;
+              }
+              footer .footer_main {
+                  grid-template-columns: 1fr; /* Make the columns stack on top of each other */
+              }
+              footer .footer_tag {
+                  margin: 10px; /* Add some spacing between footer tags */
+              }
+
+ 
+        }
+   </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <a href="#" class="logo"><img src="imgs/logo.jpg" alt="Logo"></a>
+          <ul>
+            <li><a href="index1.html">Home</a></li>
+            <li><a href="indexshop.html">Shop</a></li>
+            <li><a href="indexabout.html">About</a></li>
+            <li><a href="indexorder.html">Order</a></li>
+          </ul>
+        </nav>
+    </header>
+   
+    <section class="hero">
+        <h1>Welcome to AR Fashion Platform</h1>
+        <p>Try on the latest fashion trends virtually!</p>
+        <a href="indexshop.html" class="cta-button">Get Started</a>
+    </section>
+   
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+          <div class="product-item">
+            <div class="product-image">
+              <img src="products/front1.png" alt="Product 1">
+              <img src="products/back1.png" alt="Product 1 Hover" class="hover-image">
+            </div>
+            <h3> Air Jordan 1</h3>
+            <p>$249.99</p>
+            <a href="individual1.html" class="view-button">View</a>
+          </div>
+          <div class="product-item">
+            <div class="product-image">
+              <img src="products/front2.png" alt="Product 2">
+              <img src="products/back2.png" alt="Product 2 Hover" class="hover-image">
+            </div>
+            <h3>Nike Dunk Low</h3>
+            <p>$149.99</p>
+            <a href="individualuri2.html" class="view-button">View</a>
+          </div>
+          <div class="product-item">
+            <div class="product-image">
+              <img src="products/front3.png" alt="Product 3">
+              <img src="products/back3.png" alt="Product 3 Hover" class="hover-image">
+            </div>
+            <h3>New Balance 990</h3>
+            <p>$199.99</p>
+            <a href="individualuri3.html" class="view-button">View</a>
+          </div>
+          <div class="product-item">
+            <div class="product-image">
+              <img src="products/front4.png" alt="Product 4">
+              <img src="products/back4.png" alt="Product 4 Hover" class="hover-image">
+            </div>
+            <h3>Golden Goose Stardan</h3>
+            <p>$349.99</p>
+            <a href="individualuri4.html" class="view-button">View</a>
+          </div>
+        </div>
+      </section>
+
+    <footer>
+        <div class="footer_main">
+            <div class="footer_tag">
+                <h2>Location</h2>
+                <p>Georgia</p>
+                <p>USA</p>
+                <p>India</p>
+                <p>Japan</p>
+                <p>Italy</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Quick Link</h2>
+                <p href="#">Home</p>
+                <p href="#">About</p>
+                <p href="#">Menu</p>
+                <p href="#">Gallery</p>
+                <p href="#">Order</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Contact</h2>
+                <p>+94 12 3456 789</p>
+                <p>+94 25 5568456</p>
+                <p>gigebi2006@gmail.com</p>
+                <p>ARFashionPlatform@gmail.com</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Our Service</h2>
+                <p>Fast Delivery</p>
+                <p>Easy Payments</p>
+                <p>24 x 7 Service</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Follows</h2>
+                <i class="fa-brands fa-facebook-f"><img style="height: 30px; width: 30px; padding-right: 22px;" src="icons/fa.png"></i><br>
+                <i class="fa-brands fa-twitter"><img style="height: 30px; width: 30px; padding-right: 22px;" src="icons/tw.png"></i><br>
+                <i class="fa-brands fa-instagram"><img style="height: 30px; width: 30px; padding-right: 22px;" src="icons/in.png"></i><br>
+                <i class="fa-brands fa-linkedin-in"><img style="height: 30px; width: 30px; padding-right: 22px;" src="icons/li.png"></i>
+            </div>
+        </div>
+        <p class="end">Design by<span><i class="fa-solid fa-face-grin"></i> George Gagua</span></p>
+    </footer>
+</body>
+</html>

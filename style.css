@@ -1,0 +1,412 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Global styles */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+/* Logo styles */
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Menu styles */
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    margin-right: 30px;
+    position: relative; /* Add this line */
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Caveat', cursive;
+}
+
+/* Add this block for the border effect */
+ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff4d4d;
+    transition: width 0.3s ease;
+}
+
+ul li a:hover {
+    color: #ff4d4d;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Adjust the width of the border on hover */
+ul li a:hover::before {
+    width: 100%;
+}
+
+/* Home section styles */
+.home-section {
+    background-size: cover;
+    background-image: url('imgs/bc2.jpg');
+    background-position: center;
+    color: black;
+    text-align: center;
+    padding: 100px 0;
+    font-family: 'Caveat', cursive;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e63939;
+}
+
+/* About section styles */
+.about-section {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Caveat', cursive;
+
+}
+
+.about-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.profile-image {
+    flex: 1;
+    margin: 20px;
+    margin-top: 1px;
+    text-align: center;
+}
+
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile-text {
+    flex: 1;
+    margin: 20px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Caveat', cursive;
+}
+
+
+.about-content h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Portfolio section styles */
+.portfolio-section {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.project {
+    flex: 1; /* Distribute the available space evenly among projects */
+    margin: 10px; /* Adjust the margin for spacing */
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain; /* Adjust the object-fit property */
+    border-radius: 5px;
+}
+
+.project p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.project-button {
+    display:inline-block;
+    padding: 8px 15px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    bottom: 5px;
+    left: 50%; /* Set the button to the center */
+    transform: translateX(-0%); /* Center the button horizontally */
+    transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #e63939;
+}
+
+
+/* Contact section styles */
+.contact-section {
+    background-color: #333;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+
+}
+.contact-section h2 {
+    font-family: 'Caveat', cursive;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Caveat', cursive;
+
+}
+
+.contact-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Caveat', cursive;
+}
+
+.contact-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    font-family: 'Caveat', cursive;
+
+}
+
+/* Use a different font for the contact form */
+.contact-form {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    font-family: 'Caveat', cursive;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Caveat', cursive;
+
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Caveat', cursive;
+}
+
+.contact-button:hover {
+    background-color: #e63939;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    font-family: 'Caveat', cursive;
+}
+
+
+.footer-text {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer-text a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Header styles */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    ul {
+        margin-top: 10px;
+    }
+    
+    /* Logo styles */
+    .logo {
+        margin-bottom: 20px;
+    }
+    
+    /* Home section styles */
+    .home-section {
+        padding: 60px 0;
+    }
+    
+    .intro h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    
+    /* About section styles */
+    .about-details {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-image {
+        margin: 0 auto 20px;
+    }
+    
+    /* Portfolio section styles */
+    .projects {
+        display: block; /* Display projects in a single column */
+        margin-top: 30px;
+    }
+
+    .project {
+        margin: 15px auto; /* Center projects horizontally and increase spacing */
+        width: calc(100% - 60px); /* Reduce the width of projects */
+    }
+    /* Contact section styles */
+    .contact-section {
+        padding: 60px 0;
+    }
+    
+    .contact-content h2 {
+        font-size: 28px;
+    }
+    
+    .contact-form {
+        padding: 10px;
+    }
+    .contact-form input,
+.contact-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+}
+}
